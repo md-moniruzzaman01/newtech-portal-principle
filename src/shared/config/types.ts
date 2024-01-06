@@ -1,6 +1,13 @@
+import exp from "constants";
 import { NextPage } from "next";
 import { AppProps } from "next/app";
-import { ReactElement, ReactNode, ButtonHTMLAttributes } from "react";
+import {
+  ReactElement,
+  ReactNode,
+  ButtonHTMLAttributes,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 // _app page layout
 export type AppPropsWithLayout = AppProps & {
@@ -24,6 +31,19 @@ export type ButtonProps = {
   onClick?: () => void;
   children?: ReactNode;
   icon?: string;
+};
+
+//seach input box props
+export type SearchInputProps = {
+  className?: string;
+  loading?: boolean;
+  disabled?: boolean;
+  placeholder?: string;
+};
+export type SearchInputBoxProps = SearchInputProps & PassSetStatusProps;
+
+export type PassSetStatusProps = {
+  SetState: Dispatch<SetStateAction<string>>;
 };
 // button props
 export type CardProps = {

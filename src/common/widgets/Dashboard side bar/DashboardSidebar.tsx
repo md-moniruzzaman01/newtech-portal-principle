@@ -27,7 +27,7 @@ export default function DashboardSidebar() {
       </div>
 
       {/* Sidebar Links --Start-- */}
-      <ul className="space-y-2 grow overflow-auto">
+      <ul className="space-y-2 grow overflow-auto h-[50vh]">
         {dashboardSidebarLinks.map(({ icon, url, text }, i) => {
           const isActive = pathname === url;
           return (
