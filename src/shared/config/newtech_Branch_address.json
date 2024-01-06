@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "Branch_name": "Banani Office",
+    "address": "House-03, Flore- 3rd,  Road-07,Block-F,Banani, Dhaka-1213",
+    "tel": "+88 02 41082640",
+    "email": "service@newtechbd.net",
+    "link": "/"
+  },
+
+  {
+    "id": 2,
+    "Branch_name": "Multiplan Office ",
+    "address": "Suite-1406 & 1419, Level-14, Multiplan Center 69-71 New Elephant Road, Dhaka-1205",
+    "tel": "",
+    "email": "service@newtechbd.net",
+    "link": "/"
+  },
+  {
+    "id": 3,
+    "Branch_name": "Chattagram Office",
+    "address": "M. Court (Old), Bashar Square (5/FL) 108 Agrabad C/A, Chattagram-4100",
+    "tel": "+88 031-2513286, 2513287",
+    "email": "service@newtechbd.net",
+    "link": "/"
+  },
+  {
+    "id": 4,
+    "Branch_name": "Sylhet Office",
+    "address": "510, Level-4 (5th Floor), West World Shopping City Jallarpar, Zindabazar, Sylhet-3100",
+    "tel": "",
+    "email": "service@newtechbd.net",
+    "link": "/"
+  }
+]
