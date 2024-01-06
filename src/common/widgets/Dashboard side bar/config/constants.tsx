@@ -10,14 +10,14 @@ export const dashboardSidebarLinks: DashboardSidebarLink[] = [
   },
   {
     icon: icons.list,
-    url: "/contact",
-    text: "Contact",
-    pageTitle: "Contact",
+    url: "/complaints",
+    text: "Complaints",
+    pageTitle: "Complaints",
   },
   {
     icon: icons.user,
-    url: "/about",
-    text: "About",
-    pageTitle: "About",
+    url: "/profile",
+    text: "Profile",
+    pageTitle: "Profile",
   },
 ];
