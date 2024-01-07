@@ -8,8 +8,7 @@ const SortBy = ({ SetState }: PassSetStatusProps) => {
       <select
         name="sortBy"
         onChange={(event) => SetState(event.target.value)}
-        className=" py-1"
-        id=""
+        className=" py-1 bg-Light_gray px-2"
       >
         {sortBy.map((item, i) => (
           <option key={i} value={item}>

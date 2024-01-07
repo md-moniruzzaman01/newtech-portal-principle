@@ -8,7 +8,7 @@ const SelectStatus = ({ SetState }: PassSetStatusProps) => {
       <select
         name="select_status"
         onChange={(event) => SetState(event.target.value)}
-        className="w-[4rem] py-1"
+        className="w-[6rem] py-1 bg-Light_gray px-2"
         id=""
       >
         <option value="">Any</option>

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="grid md:grid-cols-[110px,auto] lg:grid-cols-[220px,auto] xl:grid-cols-[260px,,auto] 3xl:grid-cols-[270px,auto] min-h-screen bg-[#F7F8FA]">
+        <div className="grid md:grid-cols-[110px,auto] lg:grid-cols-[220px,auto] xl:grid-cols-[260px,,auto] 3xl:grid-cols-[270px,auto] min-h-screen bg-Light_gray">
           <DashboardSideBar />
 
           {/* Dashboard Content --Start-- */}
