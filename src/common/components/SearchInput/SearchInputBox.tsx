@@ -24,7 +24,7 @@ const SearchInputBox: FC<SearchInputBoxProps> = ({
   return (
     <form
       onSubmit={handleSearchSubmit}
-      className="flex  items-center text-background"
+      className="flex  items-center text-custom_white"
     >
       <input
         type="text"

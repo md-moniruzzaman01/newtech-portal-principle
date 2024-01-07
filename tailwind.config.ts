@@ -8,7 +8,8 @@ const config: Config = {
         primary: "#0DADE0",
         secondary: "#101250",
         disable: "#707070",
-        background: "#FFFFFF",
+        custom_white: "#FFFFFF",
+        Light_gray:"#F7F8FA",
         Dark: "#000000",
       },
       fontFamily: {
