@@ -25,3 +25,17 @@ export const StatusList = [
 ];
 
 export const sortBy = ["Newest", "Oldest"];
+
+export const TableHeadData = [
+  "SL",
+  "Complaint No.",
+  "Model No.",
+  "Serial No.",
+  "RD",
+  "Customer Name",
+  "Problem",
+  "Branch",
+  "Status",
+  "TAT",
+  "Action",
+];
