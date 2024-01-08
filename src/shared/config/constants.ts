@@ -1,7 +1,23 @@
 import classNames from "classnames";
+import { atom } from "jotai";
 
 // whenever wee need to change default className value we will use this
 export const cx = classNames;
+
+export const UserAtom = atom({
+  _id: "",
+  user_name: "",
+  full_name: "",
+  asp: "",
+  team: "",
+  contact_number: "",
+  image: "",
+  isActive: false,
+  email: "",
+  branch: "",
+  Skill: [],
+  Role: "",
+});
 
 // brand image
 export const logo = "/NT-LOGO.png";
@@ -24,7 +40,10 @@ export const StatusList = [
   "Completed",
 ];
 
-export const sortBy = ["Newest", "Oldest"];
+export const sortBy = [
+  { title: "Newest", value: "-received_date" },
+  { title: "Oldest", value: "received_date" },
+];
 
 export const TableHeadData = [
   "SL",
@@ -34,7 +53,6 @@ export const TableHeadData = [
   "RD",
   "Customer Name",
   "Problem",
-  "Branch",
   "Status",
   "TAT",
   "Action",

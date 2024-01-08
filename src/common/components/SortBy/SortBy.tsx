@@ -11,8 +11,8 @@ const SortBy = ({ SetState }: PassSetStatusProps) => {
         className=" py-1 bg-Light_gray px-2"
       >
         {sortBy.map((item, i) => (
-          <option key={i} value={item}>
-            {item}
+          <option key={i} value={item.value}>
+            {item.title}
           </option>
         ))}
       </select>

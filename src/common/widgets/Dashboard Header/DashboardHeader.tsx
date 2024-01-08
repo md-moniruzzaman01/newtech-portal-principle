@@ -1,7 +1,6 @@
 "use client";
 
 //extarnal
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 //
@@ -9,7 +8,7 @@ import { icons } from "@libs/Icons";
 import { dashboardSidebarLinks } from "@widgets/Dashboard side bar/config/constants";
 import { cx } from "@config/constants";
 
-export default function DashboardHeader() {
+export default function DashboardHeader({ User }: any) {
   const pathname = usePathname();
   const pageTitle = useMemo(
     () =>
@@ -55,7 +54,9 @@ export default function DashboardHeader() {
           <div className="w-11 h-11 md:w-[50px] rounded-full border-2 border-primary md:h-[50px] bg-slate-200 relative flex justify-center items-center">
             <div className="text-2xl">{icons.user}</div>
           </div>
+          <h2>{User}</h2>
         </div>
+
         {/* Profile Avatar --End-- */}
       </div>
     </header>

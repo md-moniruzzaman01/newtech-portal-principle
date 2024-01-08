@@ -31,7 +31,7 @@ const SearchInputBox: FC<SearchInputBoxProps> = ({
         name="search_box"
         placeholder={placeholder}
         className={cx(
-          "py-2 px-4 w-full max-w-[400px]  font-primary",
+          "py-2 px-4 w-full max-w-[400px] !text-black font-primary",
           className
         )}
       />
