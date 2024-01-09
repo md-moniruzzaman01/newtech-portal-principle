@@ -5,20 +5,22 @@ import { CardsSection } from "./partials/CardSection";
 import ChartSection from "./partials/Chart";
 import ProgressBars from "./partials/ProgessBar";
 import axios from "axios";
+import { useAtom } from "jotai";
+import { UserAtom } from "@config/constants";
 
 const Dashboard = () => {
   const [ProductCount, setProductCount] = useState([]);
   const [ProductCountTotal, setProductCountTotal] = useState(0);
-
+  const [User] = useAtom(UserAtom);
   async function getProductCount() {
-    const url = `http://localhost:5000/api/loading/product/count/MSI`;
+    const url = `${process.env.API_URL}/api/loading/product/count/${User.asp}`;
     try {
       const response = await axios.get(url).then(function (response) {
         if (response.status === 200) {
           setProductCount(response.data.result);
           setProductCountTotal(response.data.total);
         } else {
-          alert(response.data.msg);
+          console.error(response.data.msg);
         }
       });
     } catch (error) {
@@ -29,6 +31,7 @@ const Dashboard = () => {
   useEffect(() => {
     getProductCount();
   }, []);
+
   return (
     <div id="home">
       <CardsSection ProductCount={ProductCount} />
