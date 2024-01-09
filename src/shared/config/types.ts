@@ -62,3 +62,17 @@ export interface singleMenuTypes {
 export interface navDataTypes extends singleMenuTypes {
   subItems: singleMenuTypes[];
 }
+
+export type userDataProps = {
+  _id: string;
+  Skill: string[];
+  mobile_number: string;
+  full_name: string;
+  user_name: string;
+  image?: string;
+  team: string;
+  asp?: string;
+  email: string;
+  branch?: string;
+  company?: string;
+};

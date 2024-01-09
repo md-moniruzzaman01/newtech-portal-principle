@@ -42,8 +42,11 @@ const ProgressBar: FC<progressBarProps> = ({
             nextValue * 3.6
           }deg, #ededed 0deg)`;
         }
-
-        if (nextValue === progressCount) {
+        if (nextValue! < 99) {
+          if (nextValue === progressCount) {
+            clearInterval(progress);
+          }
+        } else {
           clearInterval(progress);
         }
 

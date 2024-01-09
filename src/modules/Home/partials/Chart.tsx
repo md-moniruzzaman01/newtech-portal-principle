@@ -1,20 +1,22 @@
-"use client"
+"use client";
 import {
-    Chart as ChartJS,
-    RadialLinearScale,
-    ArcElement,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-  import { PolarArea } from 'react-chartjs-2';
-  
-  ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
+  Chart as ChartJS,
+  RadialLinearScale,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { PolarArea } from "react-chartjs-2";
+import { Chartdata } from "../Helpers";
 
-import { Chartdata } from "../config/constants";
+ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
-export default function ChartSection() {
-    return(< >
-    <PolarArea data={Chartdata} />
-    </>)
-    
+export default function ChartSection({ ProductCount }: any) {
+  const data = Chartdata(ProductCount);
+
+  return (
+    <>
+      <PolarArea data={data} />
+    </>
+  );
 }

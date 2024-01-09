@@ -43,7 +43,6 @@ export default function Complaints() {
       })
       .then((data) => {
         if (data.status === 200) {
-          console.log("data", data);
           setComplaints(data.data.result);
           const totalPages: number = data.data.count / 100;
           setTotalPage(totalPages);

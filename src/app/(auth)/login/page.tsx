@@ -2,13 +2,15 @@
 
 import Brand from "@components/Brand";
 import Button from "@components/Button";
+import { userDataProps } from "@config/types";
 import refreshPage from "@utils/reload";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Login = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [data, setData] = useState<userDataProps | null>(null);
 
   const handleLoginSubmit = (e: any) => {
     e.preventDefault();
@@ -35,13 +37,38 @@ const Login = () => {
       });
   };
 
-  //   if (data?._id) {
-  //     router.push("/");
-  //   }
+  useEffect(() => {
+    setLoading(true);
+    fetch(`${process.env.API_URL}/api/auth/login`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.success) {
+          setData(data.result);
+        } else {
+          alert(data.msg);
+          router.push("/login");
+        }
+        setLoading(false);
+      });
+  }, []);
 
-  //   if (user_loading) {
-  //     return <div>Loading ...</div>;
-  //   }
+  if (data?._id) {
+    router.push("/");
+  }
+
+  if (loading) {
+    return (
+      <div className="flex min-h-screen justify-center items-center">
+        <h2 className="text-2xl">Loading ...</h2>
+      </div>
+    );
+  }
   return (
     <form onSubmit={handleLoginSubmit}>
       <div className="flex justify-center items-center min-h-screen">

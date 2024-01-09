@@ -54,7 +54,9 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <main>
-            <h1>Loading</h1>
+            <div className="flex min-h-screen justify-center items-center">
+              <h2 className="text-2xl">Loading ...</h2>
+            </div>
           </main>
         </body>
       </html>
