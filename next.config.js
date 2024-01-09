@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    API_URL: "http://localhost:5000",
+    API_URL: "https://newtech-server.onrender.com",
   },
   images: {
     domains: ["i.ibb.co", "placehold.it"],
